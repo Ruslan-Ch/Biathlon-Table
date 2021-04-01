@@ -1,0 +1,39 @@
+body{
+    background-color: #d7c48d;
+}
+table {
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+th {
+    padding: 10px;
+    border: 1px solid #2196f3;
+}
+td {
+    padding: 5px 7px;
+    border: 1px solid #2196f3;
+}
+.table_sort th {
+    min-width: 110px;
+    color: #ffebcd;
+    background: #4a914d;
+    cursor: pointer;
+}
+th.sorted[data-order="1"],
+th.sorted[data-order="-1"] {
+    position: relative;
+}
+
+th.sorted[data-order="1"]::after,
+th.sorted[data-order="-1"]::after {
+    right: 8px;
+    position: absolute;
+}
+
+th.sorted[data-order="-1"]::after {
+    content: "▼"
+}
+
+th.sorted[data-order="1"]::after {
+    content: "▲"
+}
